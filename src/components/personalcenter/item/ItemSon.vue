@@ -1,6 +1,7 @@
 <template>
     <div class="son" @click="itemClick">
-        <div :style="activityColorItem"><slot name="item-text"></slot></div>
+        <div ><slot name="item-text"></slot></div>
+<!--        :style="activityColorItem"-->
     </div>
 </template>
 
@@ -11,17 +12,17 @@
             path: String,
             activityColor: {
                 type: String,
-                default: 'red'
+                default: ''
             }
         },
         computed: {
             isActivity() {
-                console.log(this.path)
+                // console.log(this.path)
                 return this.$route.path.indexOf(this.path) !== -1
             },
-            activityColorItem() {
+            /*activityColorItem() {
                 return this.isActivity ? {color: this.activityColor} : {}
-            }
+            }*/
         },
         methods: {
             itemClick() {

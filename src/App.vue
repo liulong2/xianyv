@@ -1,19 +1,24 @@
 <template>
   <div id="app">
     <router-view></router-view>
-    <personal></personal>
   </div>
 </template>
 
 <script>
-import Personal from "@/components/personalcenter/Personal";
 export default {
   name: 'App',
   components: {
-    Personal
   }
 }
 </script>
 
 <style>
+  body {
+    margin: 40px 0;
+    font-family: "Raleway",sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    background-color: #BCAAA4;
+    -webkit-font-smoothing: antialiased;
+  }
 </style>
