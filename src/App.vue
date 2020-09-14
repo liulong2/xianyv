@@ -12,13 +12,21 @@ export default {
 }
 </script>
 
-<style>
-  body {
-    margin: 40px 0;
-    font-family: "Raleway",sans-serif;
-    font-size: 14px;
-    font-weight: 500;
-    background-color: #BCAAA4;
-    -webkit-font-smoothing: antialiased;
+<style lang="scss">
+  $green-dark: #79CB0A;
+  $green-light: #B5D020;
+  $orange-dark: #FF8700;
+  $orange-light: #FFB100;
+  $red: #FF3400;
+  $grey: #8F949B;
+  * {
+    box-sizing: border-box;
   }
+  body {
+    height: 100%;
+    font-family: 'Roboto', sans-serif !important;
+    background: linear-gradient(to left, $green-dark, $green-light);
+  }
+
+
 </style>
