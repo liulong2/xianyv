@@ -1,5 +1,5 @@
 <template>
-    <div>
+
         <form>
             <div class="form-group">
                 <label for="email">Email</label>
@@ -21,7 +21,7 @@
                 <a href="#0" @click="show_terms()">terms & conditions</a>
             </div>
         </form>
-    </div>
+
 </template>
 
 <script>
@@ -100,7 +100,7 @@
 
             check_passwords_match() {
                 if(this.password1.length > 5 && this.password2.length > 5) {
-                    if(this.password2 != this.password1) {
+                    if(this.password2 !== this.password1) {
                         this.pwd2_msg = 'Passwords do not match';
                         this.disable_btn = true;
                         return true;
@@ -135,8 +135,8 @@
 </script>
 
 <style scoped lang="scss">
-    @import "src/assets/css/sgin";
-    /*@import url('https://fonts.googleapis.com/css?family=Roboto');*/
+    /*@import "src/assets/css/sgin";*/
+    @import url('https://fonts.googleapis.com/css?family=Roboto');
 
     $orange-dark: #FF8700;
     $orange-light: #FFB100;
@@ -147,7 +147,8 @@
     form {
         width: 50%;
         height: 80%;
-        padding: 20px 50px 20px 20px;;
+        padding: 20px 50px 20px 20px;
+        margin-left: 18em;
     }
     form .form-group {
         display: flex;
