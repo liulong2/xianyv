@@ -3,7 +3,7 @@
         <item-father>
             <item-son path="/personal">
                 <template v-slot:item-text>
-                    <h1 class="title">将鼠标悬停在卡片上</h1>
+                    <!--<h1 class="title">将鼠标悬停在卡片上</h1>-->
                     <div v-if="isShowClick" class="container">
                         <card :data-image="require('../../assets/img/card/1.jpg')">
                             <h1 slot="header">峡谷</h1>
@@ -25,6 +25,7 @@
                 </template>
             </item-son>
         </item-father>
+<!--        <player></player>-->
     </div>
 </template>
 
@@ -32,13 +33,18 @@
     import ItemFather from "@/components/personalcenter/item/ItemFather";
     import ItemSon from "@/components/personalcenter/item/ItemSon";
     import Card from "../card/Card";
+    import {persons} from '../../common/mixin'
+    // import player from 'zw-player'
+
     export default {
         name: "Personal",
         components: {
             ItemFather,
             ItemSon,
-            Card
+            Card,
+            // player
         },
+        mixins: [persons],
         data() {
             return {
                 isShow: false

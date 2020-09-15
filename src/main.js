@@ -8,6 +8,13 @@ Vue.use(VueLazyload, {
   loading: require('../src/assets/img/card/1.jpg')
 })
 
+import APlayer from '@moefe/vue-aplayer';
+
+Vue.use(APlayer, {
+  defaultCover: 'https://github.com/u3u.png',
+  productionTip: true,
+});
+
 new Vue({
   render: h => h(App),
   router

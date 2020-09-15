@@ -1,24 +1,23 @@
 <template>
-    <div class="container">
-        <header>
-            <h2>denglu</h2>
-            <p>Based on <a href="https://drc8llcc7rqy7.cloudfront.net/shots/2409898/24-sign-up-large" target="blank">Sign
-                Up Design #39</a> by <a href="https://dribbble.com/deab" target="blank">Denis Abdullin</a>.</p>
-        </header>
-        <div class="signup">
-            <transition name="fade" mode="out-in">
-                <component :is="compname" @change_comp="swapcomp($event)"></component>
-            </transition>
+        <div class="container">
+            <header>
+                <h2>这是一个猫</h2>
+                <p> <a @click="clickPerson" target="blank">.
+                    </a></p>
+            </header>
+            <div class="signup">
+                <transition name="fade" mode="out-in">
+                    <component :is="compname" @change_comp="swapcomp($event)"></component>
+                </transition>
+            </div>
         </div>
-
-
-    </div>
 </template>
 
 <script>
     import SignupForm from "./item/SignupForm";
     import Results from "./item/Results";
     import Terms from "./item/Terms";
+    import {signUp} from "../../common/mixin"
 
     export default {
         name: "SignIn",
@@ -27,6 +26,7 @@
                 compname: 'signup-form'
             }
         },
+        mixins: [signUp],
         // COMPONENTS
         components: {
             SignupForm,
@@ -37,6 +37,9 @@
         methods: {
             swapcomp: function (comp) {
                 this.compname = comp;
+            },
+            clickPerson() {
+                this.$router.push('/personal')
             }
         }
     }
@@ -55,17 +58,14 @@
 
 
 
-    body {
-        height: 100%;
-        font-family: 'Roboto', sans-serif;
-        background: linear-gradient(to left, $green-dark, $green-light);
-    }
+
 
     .container {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        width: 100%;
     }
 
 

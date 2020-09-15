@@ -8,7 +8,7 @@ export const router = new VueRouter({
     routes: [
         {
             path: '/',
-            redirect: "/signin"
+            redirect: "/personal"
         },
         {
             path: '/personal',
@@ -18,5 +18,6 @@ export const router = new VueRouter({
             path: '/signin',
             component: SignIn
         }
-    ]
+    ],
+    mode: 'history'
 })
